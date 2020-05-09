@@ -1,0 +1,50 @@
+import React, {Component} from 'react';
+import {Text, View, StyleSheet, Button} from 'react-native';
+
+export default class mapFunction extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      array: [
+        {
+          title: 'example title 1',
+          subtitle: 'example subtitle 1',
+        },
+        {
+          title: 'example title 2',
+          subtitle: 'example subtitle 2',
+        },
+        {
+          title: 'example title 3',
+          subtitle: 'example subtitle 3',
+        },
+      ],
+    };
+  }
+
+  createNew = () => {
+    setState({
+      array: this.state.array.push({title: 'hi', subtitle: 'exaple'}),
+    });
+  };
+
+  list = () => {
+    return this.state.array.map((element) => {
+      return (
+        <View style={{margin: 10}}>
+          <Text>{element.title}</Text>r<Text>{element.subtitle}</Text>
+        </View>
+      );
+    });
+  };
+
+  render() {
+    return <View style={Styles.app}>{this.list()}</View>;
+  }
+}
+
+const Styles = StyleSheet.create({
+  app: {
+    padding: 50,
+  },
+});

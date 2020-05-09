@@ -1,0 +1,49 @@
+;;package manager
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+;;initial configs
+(setq delete-old-versions -1 ) ; delete excess backups silently
+(setq version-control t )
+(setq vc-make-backup-files t )
+(setq vc-follow-symlinks t )
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")) )
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)) )
+(setq inhibit-startup-screen t )
+(setq ring-bell-function 'ignore ) ; silent bell on mistakes
+(setq coding-system-for-read 'utf-8 )
+(setq coding-system-for-write 'utf-8)
+(setq sentence-end-double-space nil)
+(setq-default fill-column 80) ; toggle wrapping text at this column
+(setq initial-scratch-message "EEEEEEEEEEEmacs...macs...(macs)... Hi Ben." ) ; You should probably change this
+(global-display-line-numbers-mode t )
+(menu-bar-mode -1) ; no need for the menu bars - we've got key combos for that!
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+
+
+
+
+
+
+;; Use font lock mode
+(global-font-lock-mode t)
+
+;; Highlight cursor line
+(global-hl-line-mode t)
+;; Highlight selected region
+(transient-mark-mode t)
+
+
+
+
+(package-initialize)
+(ac-config-default)
+(global-auto-complete-mode t)
+(add-hook 'after-init-hook 'global-company-mode)
+(ivy-mode 1)
+(scroll-bar-mode -1)
+
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+

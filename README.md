@@ -1,5 +1,5 @@
 # emacs
-my (small and clean) emacs setup
+my (small and clean) emacs setup <br/>
 supports react, python, c, elisp and web out of the box
 
 # usage

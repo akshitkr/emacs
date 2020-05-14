@@ -1,0 +1,14 @@
+//
+//  test.c
+//  
+//
+//  Created by ASHISH KUMAR on 06/05/20.
+//
+#include <stdio.h>
+
+
+int main(void) {
+  printf('Hello world');
+  return 0;
+}
+

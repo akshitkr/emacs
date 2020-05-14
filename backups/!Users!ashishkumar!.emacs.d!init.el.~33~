@@ -31,6 +31,7 @@
 (setq sentence-end-double-space nil)
 (setq-default fill-column 80) ; toggle wrapping text at this column
 (setq initial-scratch-message "Hi Akshit. C-x C-f eh" ) ; You should probably change this
+(global-display-line-numbers-mode t )
 (menu-bar-mode -1) ; no need for the menu bars - we've got key combos for that!
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
@@ -44,6 +45,7 @@
 (global-font-lock-mode t)
 
 ;; Highlight cursor line
+(global-hl-line-mode t)
 ;; Highlight selected region
 (transient-mark-mode t)
 
@@ -92,7 +94,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org-journal org-journal-list php-mode eldoc-box treemacs-projectile emacs-neotree evil elcord react-snippets projectile tern-auto-complete prettier-js company-tern which-key web-mode use-package tide smartparens rjsx-mode reason-mode ocp-indent neotree monokai-theme forth-mode find-file-in-project company auto-complete all-the-icons))))
+    (php-mode eldoc-box treemacs-projectile emacs-neotree evil elcord react-snippets projectile tern-auto-complete prettier-js company-tern which-key web-mode use-package tide smartparens rjsx-mode reason-mode ocp-indent neotree monokai-theme forth-mode find-file-in-project company auto-complete all-the-icons))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -144,7 +146,3 @@
 (add-hook 'rjsx-mode-hook #'setup-tide-mode)
 (setq tide-format-options
       '(:indentSize 2 :tabSize 2))
-
-(require 'clean)
-(provide 'init)
-;;; init.el ends here 

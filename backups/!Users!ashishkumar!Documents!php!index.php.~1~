@@ -1,0 +1,13 @@
+<?php $name = "Akshit"; ?>
+
+
+
+<html>
+<body>
+  <div>
+    HI there
+    <h1>Name:  <?php echo $name; ?> </h1>
+  </div>
+</body>
+</html>
+  

@@ -1,7 +1,4 @@
-;;; package --- Summary
-;;; Commentary:
 (require 'package)
-;;; Code:
 (setq package-enable-at-startup nil) ; dont do it immediately
 (setq package-archives '(("org"       . "http://orgmode.org/elpa/")
              ("gnu"       . "http://elpa.gnu.org/packages/")
@@ -37,6 +34,9 @@
 (menu-bar-mode -1) ; no need for the menu bars - we've got key combos for that!
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
+(load-theme 'monokai t)
+
+
 
 
 
@@ -90,10 +90,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(frame-background-mode (quote dark))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell dired-sidebar org-journal org-journal-list php-mode eldoc-box treemacs-projectile emacs-neotree evil elcord react-snippets projectile tern-auto-complete prettier-js company-tern which-key web-mode use-package tide smartparens rjsx-mode reason-mode ocp-indent neotree forth-mode find-file-in-project company auto-complete all-the-icons))))
+    (dired-sidebar org-journal org-journal-list php-mode eldoc-box treemacs-projectile emacs-neotree evil elcord react-snippets projectile tern-auto-complete prettier-js company-tern which-key web-mode use-package tide smartparens rjsx-mode reason-mode ocp-indent neotree forth-mode find-file-in-project company auto-complete all-the-icons))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -105,6 +104,10 @@
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
 
 
 (require 'elcord)
@@ -142,50 +145,14 @@
 (setq tide-format-options
       '(:indentSize 2 :tabSize 2))
 
+(require 'clean)
+(provide 'init)
 
 (use-package dired-sidebar
   :ensure t
   :commands (dired-sidebar-toggle-sidebar))
 
 
-(provide 'init)
-
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
-;;appearance
-(set-frame-font "IBM Plex Mono Light 14")
 
 
-(defun mode-line-render (left right)
-  "Return a string of `window-width' length containing left, and
-   right aligned respectively."
-  (let* ((available-width (- (window-total-width) (length left) )))
-    (format (format "%%s %%%ds" available-width) left right)))
-
-
-(setq-default header-line-format
-  '(:eval (mode-line-render
-
-   (format-mode-line
-    (list
-     (propertize " File " 'face `(:weight regular))
-     "%b "
-     '(:eval (if (and buffer-file-name (buffer-modified-p))
-         (propertize "(modified)" 
-		     'face `(:weight light
-			     :foreground "#000"))))))
-   
-   (format-mode-line
-    (propertize "%3l:%2c  "
-	'face `(:weight Medium :foreground "#000"))))))
-
-(tool-bar-mode 0)      
-(tooltip-mode  0)
-(scroll-bar-mode 0)                ;; Show/hide scrollbar
-
-
-(add-to-list 'custom-theme-load-path "/Users/ashishkumar/Downloads/emacs-color-theme-solarized-master")
-
-(load-theme 'solarized t)
-  ;;; init.el ends here 
+;;; init.el ends here 

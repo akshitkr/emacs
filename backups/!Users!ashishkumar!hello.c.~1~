@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void){
+  string c = "EMMA";
+  print("%c", c[4]);
+}

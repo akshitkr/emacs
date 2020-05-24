@@ -1,0 +1,6 @@
+import { serve } from "https://deno.land/std@v0.21.0/http/server.ts";
+
+// `serve` function returns an asynchronous iterator, yielding a stream of requests
+for await (const req of serve({ port: 8000 })) {
+    req.respond({ body: "Hello World\n" });
+}

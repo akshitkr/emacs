@@ -1,0 +1,34 @@
+const pages = [
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+  {
+    name: 'Web Development',
+    url:
+      'https://docs.google.com/document/d/11Vw0SjQC-xpLHbj__VxbPyST8GVFkqkfoEATZfuPLsU/edit?usp=sharing',
+  },
+];
+
+export default pages;

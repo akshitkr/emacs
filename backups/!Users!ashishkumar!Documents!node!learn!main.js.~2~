@@ -1,0 +1,5 @@
+const list = ["bruh", "lmao", "dude"];
+
+list.forEach((item, index, o) => {
+  console.log(item, index, o);
+});

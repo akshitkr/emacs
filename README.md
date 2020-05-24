@@ -8,5 +8,5 @@ supports react, python, c, elisp and web out of the box
 
 # screenshot
 
-![screenshot](https://i.imgur.com/hNQQq0t.png)
+![screenshot](https://i.imgur.com/HRv0p6M.png)
 

@@ -1,5 +1,3 @@
-;;; package --- Summary
-;;; Commentary:
 (require 'package)
 ;;; Code:
 (setq package-enable-at-startup nil) ; dont do it immediately
@@ -7,185 +5,71 @@
              ("gnu"       . "http://elpa.gnu.org/packages/")
              ("melpa"     . "https://melpa.org/packages/")))
 (package-initialize);;package manager
-
-;; Bootstrap use-package
+;;package-install setup
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents) ; update archives
-  (package-install 'use-package)) ; grab the newest use-package
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'org)
 
-;; Define packages
-(require 'use-package)
-
-;; Always download if not available
-(setq use-package-always-ensure t)
-
-(use-package all-the-icons)
-;;initial configs
-(setq delete-old-versions -1 ) ; delete excess backups silently
-(setq version-control t )
-(setq vc-make-backup-files t )
-(setq vc-follow-symlinks t )
-(setq backup-directory-alist `(("." . "~/.emacs.d/backups")) )
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)) )
-(setq inhibit-startup-screen t )
-(setq ring-bell-function 'ignore ) ; silent bell on mistakes
-(setq coding-system-for-read 'utf-8 )
-(setq coding-system-for-write 'utf-8)
-(setq sentence-end-double-space nil)
-(setq-default fill-column 80) ; toggle wrapping text at this column
-(setq initial-scratch-message "Hi Akshit. C-x C-f eh" ) ; You should probably change this
-(menu-bar-mode -1) ; no need for the menu bars - we've got key combos for that!
-(toggle-scroll-bar -1)
-(tool-bar-mode -1)
-
-
-
-;; Use font lock mode
-(global-font-lock-mode t)
-
-;; Highlight cursor line
-;; Highlight selected region
-(transient-mark-mode t)
-
-
-
-
-(package-initialize)
-(require 'auto-complete)
-(ac-config-default)
-(global-auto-complete-mode t)
-(add-hook 'after-init-hook 'global-company-mode)
-(ivy-mode 1)
-(scroll-bar-mode -1)
-
-
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(show-paren-mode 1)
-(electric-pair-mode 1)
-
-(require 'init-neotree)
-(require 'init-ivy)
-(require 'init-flycheck)
-(require 'init-company)
-(require 'init-which-key)
-(use-package find-file-in-project)
-
-(global-set-key (kbd "C-c h") 'company-complete)
-
-
-(require 'init-rjsx)
-
-(add-hook 'rjsx-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil) ;;Use space instead of tab
-            (setq js-indent-level 2) ;;space width is 2 (default is 4)
-            (setq js2-strict-missing-semi-warning nil))) ;;disable the semicolon warning
-
-(require 'company)
-
-                           
-;; Disable completion keybindings, as we use
+(org-babel-load-file (expand-file-name "~/.emacs.d/config.org"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(frame-background-mode (quote dark))
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(compilation-message-face (quote default))
+ '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-safe-themes
+   (quote
+    ("f9aede508e587fe21bcfc0a85e1ec7d27312d9587e686a6f5afdbb0d220eab50" default)))
+ '(fci-rule-color "#3C3D37")
+ '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+ '(highlight-tail-colors
+   (quote
+    (("#3C3D37" . 0)
+     ("#679A01" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#3C3D37" . 100))))
+ '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell dired-sidebar org-journal org-journal-list php-mode eldoc-box treemacs-projectile emacs-neotree evil elcord react-snippets projectile tern-auto-complete prettier-js company-tern which-key web-mode use-package tide smartparens rjsx-mode reason-mode ocp-indent neotree forth-mode find-file-in-project company auto-complete all-the-icons))))
+    (beacon which-key web-mode use-package treemacs-projectile tide tern-auto-complete smartparens rjsx-mode reason-mode react-snippets prettier-js php-mode org-journal-list ocp-indent neotree monokai-theme magit forth-mode find-file-in-project exec-path-from-shell evil emmet-mode eldoc-box elcord dired-sidebar company-tern all-the-icons)))
+ '(pos-tip-background-color "#FFFACE")
+ '(pos-tip-foreground-color "#272822")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#F92672")
+     (40 . "#CF4F1F")
+     (60 . "#C26C0F")
+     (80 . "#E6DB74")
+     (100 . "#AB8C00")
+     (120 . "#A18F00")
+     (140 . "#989200")
+     (160 . "#8E9500")
+     (180 . "#A6E22E")
+     (200 . "#729A1E")
+     (220 . "#609C3C")
+     (240 . "#4E9D5B")
+     (260 . "#3C9F79")
+     (280 . "#A1EFE4")
+     (300 . "#299BA6")
+     (320 . "#2896B5")
+     (340 . "#2790C3")
+     (360 . "#66D9EF"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (quote
+    (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(use-package prettier-js)
-(add-hook 'js2-mode-hook 'prettier-js-mode)
-(add-hook 'web-mode-hook 'prettier-js-mode)
-
-
-
-(require 'elcord)
-(elcord-mode)
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
-
-
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
-
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
-(windmove-default-keybindings)
-
-;; Use rjsx-mode for js files
-(add-to-list 'auto-mode-alist '("\\.js\\'"    . rjsx-mode))
-;; Tide setup
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-;;  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
-(setq tide-completion-ignore-case t)
-;; formats the buffer before saving
-;;(add-hook 'before-save-hook 'tide-format-before-save)
-(add-hook 'js2-mode-hook #'setup-tide-mode)
-(add-hook 'rjsx-mode-hook #'setup-tide-mode)
-(setq tide-format-options
-      '(:indentSize 2 :tabSize 2))
-
-
-(use-package dired-sidebar
-  :ensure t
-  :commands (dired-sidebar-toggle-sidebar))
-
-
-(provide 'init)
-
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
-;;appearance
-(set-frame-font "IBM Plex Mono Light 14")
-
-
-(defun mode-line-render (left right)
-  "Return a string of `window-width' length containing left, and
-   right aligned respectively."
-  (let* ((available-width (- (window-total-width) (length left) )))
-    (format (format "%%s %%%ds" available-width) left right)))
-
-
-(setq-default header-line-format
-  '(:eval (mode-line-render
-
-   (format-mode-line
-    (list
-     (propertize " File " 'face `(:weight regular))
-     "%b "
-     '(:eval (if (and buffer-file-name (buffer-modified-p))
-         (propertize "(modified)" 
-		     'face `(:weight light
-			     :foreground "#000"))))))
-   
-   (format-mode-line
-    (propertize "%3l:%2c  "
-	'face `(:weight Medium :foreground "#000"))))))
-
-(tool-bar-mode 0)      
-(tooltip-mode  0)
-(scroll-bar-mode 0)                ;; Show/hide scrollbar
-
-
-(add-to-list 'custom-theme-load-path "/Users/ashishkumar/Downloads/emacs-color-theme-solarized-master")
-
-(load-theme 'solarized t)
-  ;;; init.el ends here 

@@ -1,0 +1,50 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/ashishkumar/Documents/node/" . "MERN-boilerplate/")
+ ("/Users/ashishkumar/Documents/" . "node/")
+ ("/Users/ashishkumar/.emacs.d/" . "lisp/")
+ ("/Users/ashishkumar/" . "Documents/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/ashishkumar/Documents/node/MERN-boilerplate/"
+ "/Users/ashishkumar/.emacs.d/"
+ "/Users/ashishkumar/.emacs.d/lisp/"
+ "/Users/ashishkumar/Documents/notes/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "server.js"
+ "init.el"
+ "init-rjsx.el"
+ "init-flycheck.el"
+ "classes.org"
+ "old-init.el"
+ "init-company.el"
+ "config.org"
+ "config.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/ashishkumar/Documents/node/MERN-boilerplate/" (24297 45337 57775 326000) "client/" "postcss.config.js" ".git/" "package.json" "package-lock.json" ".gitignore" "README.md" ".editorconfig" "webpack.config.js" "server/" "node_modules/" "server.js" "config/" "LICENSE" ".babelrc" "../" "./")
+
+ ("/Users/ashishkumar/Documents/node/" (24297 52747 49641 337000) "express-mern/" "node-express-course/" "node-api/" "package.json" "MERN-boilerplate/" "elite-reg/" "gatsby/" "server/" "exun-reg/" "index.js" "exunclan.github.io/" "passport-setup.js" "js/" "papers/" "chat/" "test.js" ".DS_Store" "learn/" "prep/" "scraper/" "../" "./")
+
+ ("/Users/ashishkumar/.emacs.d/" (24301 48197 607943 961000) "backups/" "games/" ".git/" "config.org~" "elpa/" "old-init.el" "recentf" ".gitignore" "init-smartparens.el" "README.md" "init.el" "url/" "auto-save-list/" "config.el" "transient/" "projectile-bookmarks.eld" "config.org" ".#test.el" "Test" "test.el" "lisp/" "init.el~" "ac-comphist.dat" ".#old-init.el" "../" "./")
+
+ ("/Users/ashishkumar/.emacs.d/lisp/" (24301 48050 165479 581000) "init-tide.el" ".#init-flycheck.el" "init-company.el" "clean.el" "init-which-key.el" "init-spartparens.el" "init-ivy.el" "init-flycheck.el" "init-neotree.el" "init-rjsx.el" "../" "./")
+
+ ("/Users/ashishkumar/Documents/notes/" (24301 42707 266366 912000) "test.org~" "test.org" "debate.org" "#test.org#" "classes.org" "todo.org" "#classes.org#" "#chem.org#" "../" "./")
+
+ ("/Users/ashishkumar/Documents/" (24298 3366 952189 940000) "websites/" "react/" "c/" "accessprelims/" "node/" "html5-boilerplate_v7.3.0/" "snek/" "pythonpractice/" "Zoom/" "GitHub/" "notes/" "Guam_YETI_ JohnFKennedyHighSchool.pptx" "TunesKit Spotify Converter/" "php/" "email-api-master/" "#rwdc-general_files/" "typescript/" "Paradox Interactive/" "Processing/" ".localized" "python/" "ezweb/" "css-masonry/" ".DS_Store" "svelte/" "Timeline4/" "jekyll/" "deno/" "songs/" "Archia_Regular/" "../" "./")
+
+ ("/Users/ashishkumar/" (24301 41572 291589 860000) "74240104_467560460775338_3763787885682098176_n.jpg" ".conda/" ".zlogin" ".viminfo" ".bash_history" ".mongorc.js" "key55" ".gitconfig" ".cache/" ".python_history" "Downloads/" ".Xauthority" ".vim_runtime/" "test.md" ".gem/" "node-express-course/" ".bash_profile" ".bachrc" ".spacemacs" ".vscode/" ".mono/" ".git/" ".mysql_history" "node/" ".pyenv/" ".ngrok2/" "Documents/" ".npm/" ".backups/" "hello" ".swo" "test.c" ".jupyter/" "helloworld.org~" ".ipynb_checkpoints/" "welcome.org" ".react-native-cli/" ".Trash/" "hi" ".emacs~" ".flutter_settings" ".degit/" ".gradle/" ".profile" ".dbshell" "Applications/" ".vimrc" "Movies/" ".ssh/" "#foo#" "Users/" "AwesomeProject/" "sas" "tutor" ".flutter" ".idlerc/" ".keystore" ".bash_profile-anaconda3.bak" "Public/" "PycharmProjects/" "helloworld.tex~" ".bash_sessions/" ".cups/" "kill" ".cocoapods/" ".android/" ".node_repl_history" ".emacs.d/" "clean.el" ".scrapinghub.yml" ".emulator_console_auth_token" ".oracle_jre_usage/" "test.py" ".mkshrc" ".matplotlib/" ".npmrc" "Library/" "Desktop/" ".rvm/" ".ipython/" ".gnome2/" "homebrew/" "Postman/" "helloworld.org" ".pub-cache/" ".bundle/" ".dartServer/" ".eslintrc" ".atom/" "chrome-extension/" ".pylint.d/" "Pictures/" ".psql_history" ".local/" ".swp" ".omnisharp/" ".zshrc" "Untitled.ipynb" ".bashrc" ".subversion/" ".netrc" ".rbenv/" ".#hello.c" ".vscode-react-native/" "helloworld.tex" "bin/" ".tooling/" ".wget-hsts" "test" ".CFUserTextEncoding" ".yarnrc" "dotfiles/" "ddos/" ".thumbnails/" ".emacs.keyfreq" ".DS_Store" "index.html" "hello.c" ".dart/" ".vim/" "Untitled1.ipynb" ".node-gyp/" "#index.html#" ".condarc" ".expo/" "Music/" ".config/" "nano.save" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

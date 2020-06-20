@@ -1,4 +1,5 @@
 * my config.org
+*** A minimal emacs config, supports python, c++, javascript/react out of the box.
 ** Minor mode changes
 #+BEGIN_SRC emacs-lisp
 
@@ -51,12 +52,6 @@
   (ad-activate 'ansi-term)
 
   (defalias 'yes-or-no-p 'y-or-n-p)
-#+END_SRC
-** Company
-#+BEGIN_SRC emacs-lisp
-
-  (add-hook 'after-init-hook 'global-company-mode)
-
 #+END_SRC
 ** IDO
 #+BEGIN_SRC emacs-lisp

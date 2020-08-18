@@ -1,1 +1,1 @@
-("~/" "~/Documents/react/exun-app/")
+("~/.emacs.d/" "~/Documents/code/prep/frontend/" "~/" "~/Documents/code/node/express-mern/" "~/Documents/code/react-native/stockchimp/")

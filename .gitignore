@@ -21,3 +21,4 @@ elpa/emmet-mode-20180613.341/emmet-mode-pkg.el
 elpa/emmet-mode-20180613.341/emmet-mode.elc
 auto-save-list
 backups
+/spotify.el-master/*.py

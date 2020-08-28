@@ -9,7 +9,13 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(require 'use-package)
+
 (require 'org)
+
+
+
+
 
 (org-babel-load-file (expand-file-name "~/.emacs.d/config.org"))
 (custom-set-variables

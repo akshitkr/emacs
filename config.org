@@ -45,9 +45,6 @@
 
   (use-package all-the-icons
 :ensure t)
-  (setq sml/no-confirm-load-theme t)
-   (setq sml/theme 'dark) ;; changes the theme to dark
-  (sml/setup) ;; automati
 #+END_SRC
 ** use-package
 #+BEGIN_SRC emacs-lisp
@@ -104,6 +101,8 @@
 #+END_SRC
 ** imp setting
 #+BEGIN_SRC emacs-lisp
+  (use-package exec-path-from-shell
+  :ensure t)
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
 
@@ -192,8 +191,9 @@
 #+END_SRC
 ** yasnippet
 #+BEGIN_SRC emacs-lisp
+(use-package yasnippet)
 (yas-global-mode  t)
-(require 'react-snippets) ;;react snippets
+(use-package react-snippets) ;;react snippets
 
 (defvar company-mode/enable-yas t
   "Enable yasnippet for all backends.")
@@ -215,6 +215,7 @@
 #+END_SRC
 ** projectile
 #+BEGIN_SRC emacs-lisp
+(use-package projectile)
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -236,4 +237,9 @@
 			(projects . 5)
 			(agenda . 5)
 			(registers . 5)))
+#+END_SRC
+** magit
+#+BEGIN_SRC emacs-lisp
+(use-package magit)
+
 #+END_SRC

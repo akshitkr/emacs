@@ -5,4 +5,5 @@
  (magit-rebase nil)
  (magit-remote
   ("-f"))
- (magit-submodule nil))
+ (magit-submodule nil)
+ (magit-worktree nil))

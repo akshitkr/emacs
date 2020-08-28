@@ -1,0 +1,103 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Aug 20 17:59:50 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24382 27838 587960 0) (desktop . "208") "ashishkumar@ASHISHs-MacBook-Air.local" nil nil ((((minibuffer . t) (font-backend mac-ct) (fontsize . 0) (font . "-*-Fira Code-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#bdbdb3") (background-color . "gray15") (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (undecorated) (ns-appearance . unbound) (ns-transparent-titlebar . unbound) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen . fullboth) (display-type . color) (background-mode . dark) (cursor-color . "#afffef") (environment) (frameset--id . "A9BF-7AE7-2895-00C3") (frameset--mini t . t) (height . 44) (width . 157) (modeline . t) (unsplittable) (left . 3) (top . 8) (icon-name) (visibility . t) (display . "ASHISHs-MacBook-Air.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 80) (min-pixel-width . 90) (min-pixel-height-ignore . 40) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 20) (min-pixel-width-safe . 18)) leaf (pixel-width . 1429) (pixel-height . 860) (total-width . 159) (total-height . 43) (normal-height . 1.0) (normal-width . 1.0) (buffer "server" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 288) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("emacs"))
+(setq register-alist nil)
+(setq file-name-history '("/Users/ashishkumar/.emacs.d/desktops/" "/Users/ashishkumar/.emacs.d/desktops" "/Users/ashishkumar/.emacs.d/" "/Users/ashishkumar/" "/Users/ashishkumar/Documents/code/node/metro/server/models/Users.js" "/Users/ashishkumar/Documents/code/node/metro/server/" "~/Documents/code/node/metro/server/index.js" "~/Documents/code/node/metro/.gitignore" "~/Documents/code/c/copy.c" "~/.emacs.d/config.org" "~/.emacs.d/init.el" "~/Documents/code/node/metro" "~/Documents/code/prep/frontend/src/pages/dashboard.js" "~/.emacs.d/ashishkumar-theme.el" "~/.emacs.d/config.el" "~/Documents/screenshots/test.txt" "~/Documents/screenshots/Rian-Borah_82005f_video copy.txt" "~/Documents/code/prep/frontend/src/pages/register.js" "~/Documents/code/prep/frontend/src/pages/login.js" "~/Documents/code/prep/frontend/src/components/AuthComponent.js" "~/Documents/code/prep/frontend/public/index.html" "~/Documents/code/prep/frontend/src/styles/main.css" "~/Documents/code/node/express-mern/routes/users.js" "~/Documents/code/node/express-mern/models/Users.js"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  nil
+  "server"
+  'dired-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode yas-minor-mode projectile-mode company-mode)
+  288
+  '(nil nil)
+  t
+  '("/Users/ashishkumar/Documents/code/node/metro/server/")
+  '((buffer-display-time 24382 27835 990523 0) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/ashishkumar/Documents/code/node/metro/server/models/Users.js"
+  "Users.js"
+  'rjsx-mode
+  '(visual-line-mode eldoc-mode ivy-mode override-global-mode which-key-mode undo-tree-mode flycheck-mode yas-minor-mode projectile-mode company-mode tide-mode)
+  175
+  '(175 nil)
+  nil
+  nil
+  '((buffer-display-time 24382 27826 700568 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/ashishkumar/.emacs.d/desktops/"
+  "desktops"
+  'fundamental-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode undo-tree-mode yas-minor-mode projectile-mode company-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 24382 27820 500596 0) (buffer-file-coding-system . utf-8) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode yas-minor-mode projectile-mode company-mode)
+  268
+  '(268 nil)
+  t
+  '("/Users/ashishkumar/.emacs.d/")
+  '((buffer-display-time 24382 27818 536652 0) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "ashishkumar"
+  'dired-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode yas-minor-mode projectile-mode company-mode)
+  2180
+  '(341 nil)
+  t
+  '("/Users/ashishkumar/")
+  '((buffer-display-time 24382 27784 386530 0) (overwrite-mode) (truncate-lines))
+  '((mark-ring (341))))
+
+(desktop-create-buffer 208
+  "/Users/ashishkumar/Documents/code/node/metro/server/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode undo-tree-mode yas-minor-mode projectile-mode company-mode auto-revert-mode magit-file-mode)
+  13
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 24382 21967 471898 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/ashishkumar/Documents/code/node/metro/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(visual-line-mode ivy-mode override-global-mode which-key-mode undo-tree-mode yas-minor-mode projectile-mode company-mode auto-revert-mode magit-file-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 24382 21092 385427 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+

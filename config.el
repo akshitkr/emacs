@@ -38,9 +38,6 @@
 
   (use-package all-the-icons
 :ensure t)
-  (setq sml/no-confirm-load-theme t)
-   (setq sml/theme 'dark) ;; changes the theme to dark
-  (sml/setup) ;; automati
 
 ;; Bootstrap use-package
 (unless (package-installed-p 'use-package)
@@ -74,6 +71,8 @@
 (use-package color
 :ensure t)
 
+(use-package exec-path-from-shell
+:ensure t)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
@@ -129,8 +128,9 @@
   :defer t
   :ensure t)
 
+(use-package yasnippet)
 (yas-global-mode  t)
-(require 'react-snippets) ;;react snippets
+(use-package react-snippets) ;;react snippets
 
 (defvar company-mode/enable-yas t
   "Enable yasnippet for all backends.")
@@ -147,6 +147,7 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 
+(use-package projectile)
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -165,3 +166,5 @@
 			(projects . 5)
 			(agenda . 5)
 			(registers . 5)))
+
+(use-package magit)

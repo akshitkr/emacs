@@ -1,1 +1,1 @@
-("~/Documents/code/node/metroBite/" "~/.emacs.d/" "~/Documents/journal/" "~/Documents/code/python/mandir/" "~/" "~/Documents/code/prep/frontend/" "~/Documents/code/node/express-mern/" "~/Documents/code/react-native/stockchimp/")
+("~/.emacs.d/" "~/Documents/code/node/metroBite/" "~/Documents/journal/" "~/Documents/code/python/mandir/" "~/" "~/Documents/code/prep/frontend/" "~/Documents/code/node/express-mern/" "~/Documents/code/react-native/stockchimp/")

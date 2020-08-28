@@ -57,6 +57,9 @@
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yasnippet-snippets which-key web-mode use-package treemacs-projectile tide tern-auto-complete spotify spacemacs-theme smex smartparens smart-mode-line-powerline-theme rust-mode rjsx-mode reason-mode react-snippets rainbow-mode prettier-js php-mode org-journal-list olivetti ocp-indent neotree multi monokai-theme magit forth-mode flutter find-file-in-project exec-path-from-shell evil-collection emmet-mode eldoc-box elcord dired-sidebar dashboard dart-server dart-mode counsel-spotify company-tern ample-theme all-the-icons ag)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#000")
  '(pos-tip-foreground-color "#272822")

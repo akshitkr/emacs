@@ -43,7 +43,8 @@
   (add-hook 'before-save-hook 'whitespace-cleanup)
   (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 
-  (require 'all-the-icons)
+  (use-package all-the-icons
+:ensure t)
   (setq sml/no-confirm-load-theme t)
    (setq sml/theme 'dark) ;; changes the theme to dark
   (sml/setup) ;; automati
@@ -87,6 +88,7 @@
   ;;font
   (set-face-attribute 'default nil
 		      :family "Fira Code Light"
+		      :height 150
  )
 
 
@@ -96,7 +98,8 @@
    (add-hook 'after-init-hook 'global-company-mode)
    (setq company-dabbrev-downcase 0)
    (setq company-idle-delay 0)
-     (require 'color)
+   (use-package color
+   :ensure t)
 
 #+END_SRC
 ** imp setting
@@ -173,7 +176,8 @@
 #+END_SRC
 ** rust
 #+BEGIN_SRC emacs-lisp
-(require 'rust-mode)
+(use-package rust-mode
+:ensure t)
 
 #+END_SRC
 ** theme
@@ -203,6 +207,8 @@
 #+END_SRC
 ** ivy
 #+BEGIN_SRC emacs-lisp
+(use-package ivy
+:ensure t)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
@@ -230,14 +236,4 @@
 			(projects . 5)
 			(agenda . 5)
 			(registers . 5)))
-#+END_SRC
-** spotify
-#+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/spotify.el-master"))
-(require 'spotify)
-
-(setq spotify-oauth2-client-secret "974b03419fde42d98cf6eb904691e2ed")
-(setq spotify-oauth2-client-id "6d1b54344e304c99bcdef61070f0ce26")
-(define-key spotify-mode-map (kbd "C-w .") 'spotify-command-map)
-
 #+END_SRC

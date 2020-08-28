@@ -4,4 +4,5 @@
  (magit-push nil)
  (magit-rebase nil)
  (magit-remote
-  ("-f")))
+  ("-f"))
+ (magit-submodule nil))

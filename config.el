@@ -26,20 +26,21 @@
 (use-package find-file-in-project)
 
 (add-hook 'window-setup-hook (lambda()
-		       (setq ns-auto-hide-menu-bar t)
-		       (set-frame-position nil 0 -24)
-		       (set-frame-size nil (display-pixel-width) (display-pixel-height) t)))
-(add-hook 'after-init-hook 'global-hl-line-mode)
-(setq show-paren-delay 0)
-(global-visual-line-mode t)
-(setq-default show-trailing-whitespace t)
-(add-hook 'before-save-hook 'whitespace-cleanup)
-(add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
+			 (setq ns-auto-hide-menu-bar t)
+			 (set-frame-position nil 0 -24)
+			 (set-frame-size nil (display-pixel-width) (display-pixel-height) t)))
+  (add-hook 'after-init-hook 'global-hl-line-mode)
+  (setq show-paren-delay 0)
+  (global-visual-line-mode t)
+  (setq-default show-trailing-whitespace t)
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+  (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 
-(require 'all-the-icons)
-(setq sml/no-confirm-load-theme t)
- (setq sml/theme 'dark) ;; changes the theme to dark
-(sml/setup) ;; automati
+  (use-package all-the-icons
+:ensure t)
+  (setq sml/no-confirm-load-theme t)
+   (setq sml/theme 'dark) ;; changes the theme to dark
+  (sml/setup) ;; automati
 
 ;; Bootstrap use-package
 (unless (package-installed-p 'use-package)
@@ -64,12 +65,14 @@
 ;;font
  (set-face-attribute 'default nil
 		     :family "Fira Code Light"
+		     :height 150
 )
 
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-dabbrev-downcase 0)
 (setq company-idle-delay 0)
-  (require 'color)
+(use-package color
+:ensure t)
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
@@ -115,7 +118,8 @@
 (setq tide-format-options
       '(:indentSize 2 :tabSize 2))
 
-(require 'rust-mode)
+(use-package rust-mode
+:ensure t)
 
 (use-package ample-theme
   :init (progn (load-theme 'ample t t)
@@ -137,6 +141,8 @@
     (append (if (consp backend) backend (list backend))
 	    '(:with company-yasnippet))))
 
+(use-package ivy
+:ensure t)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
@@ -159,10 +165,3 @@
 			(projects . 5)
 			(agenda . 5)
 			(registers . 5)))
-
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/spotify.el-master"))
-(require 'spotify)
-
-(setq spotify-oauth2-client-secret "974b03419fde42d98cf6eb904691e2ed")
-(setq spotify-oauth2-client-id "6d1b54344e304c99bcdef61070f0ce26")
-(define-key spotify-mode-map (kbd "C-w .") 'spotify-command-map)

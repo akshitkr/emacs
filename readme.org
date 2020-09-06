@@ -1,3 +1,6 @@
+** Screenshots
+   [[./screenshots/1.png]]
+[[./screenshots/2.png]]
 ** Minor mode changes
 #+BEGIN_SRC emacs-lisp
 

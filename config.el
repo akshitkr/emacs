@@ -65,11 +65,22 @@
 		     :height 150
 )
 
-(add-hook 'after-init-hook 'global-company-mode)
-(setq company-dabbrev-downcase 0)
-(setq company-idle-delay 0)
-(use-package color
+(use-package company
 :ensure t)
+   (add-hook 'after-init-hook 'global-company-mode)
+   (setq company-dabbrev-downcase 0)
+   (setq company-idle-delay 0)
+   (use-package color
+   :ensure t)
+   (require 'color)
+
+  (let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+     `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+     `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+     `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+     `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+     `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
 (use-package exec-path-from-shell
 :ensure t)
@@ -99,6 +110,8 @@
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 
+(use-package tide
+:ensure t)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -119,6 +132,18 @@
 
 (use-package rust-mode
 :ensure t)
+
+(use-package toml-mode)
+
+(use-package rust-mode
+  :hook (rust-mode . lsp))
+
+;; Add keybindings for interacting with Cargo
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package ample-theme
   :init (progn (load-theme 'ample t t)
@@ -141,11 +166,12 @@
     (append (if (consp backend) backend (list backend))
 	    '(:with company-yasnippet))))
 
-(use-package ivy
+(use-package helm
 :ensure t)
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
 
 (use-package projectile)
 (projectile-mode +1)

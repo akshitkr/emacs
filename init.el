@@ -12,19 +12,12 @@
 (require 'use-package)
 
 (require 'org)
-
-
-
-
-
-(org-babel-load-file (expand-file-name "~/.emacs.d/config.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/readme.org"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-quickhelp-color-background "#4F4F4F")
- '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-enabled-themes (quote (ample-flat)))
  '(custom-safe-themes
    (quote
@@ -65,7 +58,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (zenburn-theme yasnippet-snippets which-key web-mode use-package treemacs-projectile tide tern-auto-complete spotify spacemacs-theme smex smartparens smart-mode-line-powerline-theme rust-mode rjsx-mode reason-mode react-snippets rainbow-mode prettier-js php-mode org-journal-list olivetti ocp-indent neotree multi monokai-theme magit forth-mode flutter find-file-in-project exec-path-from-shell evil-collection emmet-mode eldoc-box elcord dired-sidebar dashboard dart-server dart-mode counsel-spotify company-tern ample-theme all-the-icons ag)))
+    (helm request url-http-ntlm markdown-mode flycheck-rust cargo toml-mode company zenburn-theme yasnippet-snippets which-key web-mode use-package treemacs-projectile tide tern-auto-complete spotify spacemacs-theme smex smartparens smart-mode-line-powerline-theme rust-mode rjsx-mode reason-mode react-snippets rainbow-mode prettier-js php-mode org-journal-list olivetti ocp-indent neotree multi monokai-theme magit forth-mode flutter find-file-in-project exec-path-from-shell evil-collection emmet-mode eldoc-box elcord dired-sidebar dashboard dart-server dart-mode counsel-spotify company-tern ample-theme all-the-icons ag)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#000")
  '(pos-tip-foreground-color "#272822")
@@ -167,8 +160,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-scrollbar-bg ((t (:background "#000"))))
- '(company-scrollbar-fg ((t (:background "#000"))))
- '(company-tooltip ((t (:inherit default :background "#000"))))
+ '(company-scrollbar-bg ((t (:background "#ffffffffffff"))))
+ '(company-scrollbar-fg ((t (:background "#ffffffffffff"))))
+ '(company-tooltip ((t (:inherit default :background "#ffffffffffff"))))
  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
  '(company-tooltip-selection ((t (:inherit font-lock-function-name-face)))))

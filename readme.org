@@ -1,3 +1,6 @@
+** Note
+Scrapped, moved to doom emacs )
+
 ** Screenshots
    [[./screenshots/1.png]]
 [[./screenshots/2.png]]

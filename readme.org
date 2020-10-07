@@ -1,5 +1,5 @@
 ** Note
-Scrapped, moved to doom emacs )
+.emacs.d bankrupt, moved to doom emacs ;;;
 
 ** Screenshots
    [[./screenshots/1.png]]
